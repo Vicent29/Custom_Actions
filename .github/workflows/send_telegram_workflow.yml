@@ -14,3 +14,4 @@ jobs:
         env:
           tel_token: ${{secrets.TOKEN}}
           tel_chat_id: ${{secrets.CHAT_ID}}
+          name: "VICENT"
