@@ -57303,8 +57303,8 @@ var __webpack_exports__ = {};
 const core = __nccwpck_require__(4328);
 const TelegramBot = __nccwpck_require__(115);
 
-const token = core.getInput('tel_token');
-const chat_id = core.getInput('tel_chat_id');
+const token = process.env.tel_token;
+const chat_id = process.env.tel_chat_id;
 const telegram_msg = 'Workflow ejecutado correctamente tras el último commit. Saludos VICENT';
 const bot = new TelegramBot(token, { polling: true });
 

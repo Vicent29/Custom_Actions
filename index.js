@@ -1,8 +1,8 @@
 const core = require('@actions/core');
 const TelegramBot = require('node-telegram-bot-api');
 
-const token = core.getInput('tel_token');
-const chat_id = core.getInput('tel_chat_id');
+const token = process.env.tel_token;
+const chat_id = process.env.tel_chat_id;
 const telegram_msg = 'Workflow ejecutado correctamente tras el último commit. Saludos VICENT';
 const bot = new TelegramBot(token, { polling: true });
 
