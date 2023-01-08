@@ -1,15 +1,17 @@
-name: send_telegram_action
-description: "Action que envia un telegram"
+name: "Action TelegramBot "
+description: "accion para enviar mensajes por telegram"
 inputs:
-  telegram_token:
-    description: "token de telegram"
+  tel_token:
+    description: "Token Bot"
     required: true
-  telegram_user_id:
-    description: "user id de telegram"
+  tel_chat_id:
+    description: "Id del Chat donde enviara lso mensajes"
     required: true
 outputs:
   msg:
-    description: "mensaje de respuesta"
+    description: "Mensaje enviado"
 runs:
   using: "node16"
   main: "dist/index.js"
+
+  

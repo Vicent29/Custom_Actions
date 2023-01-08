@@ -12,5 +12,5 @@ jobs:
       - name: Action Bot
         uses: ./.github/actions
         env:
-          telegram_token: ${{secrets.TOKEN}}
-          telegram_chat_id: ${{secrets.CHAT_ID}}
+          tel_token: ${{secrets.TOKEN}}
+          tel_chat_id: ${{secrets.CHAT_ID}}
