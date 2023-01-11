@@ -1,0 +1,20 @@
+{
+  "name": "Tests_GitHub_Actions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "dev": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "eslint-config-standard": "^17.0.0",
+    "express": "^4.17.2",
+    "nodemon": "^2.0.20"
+  },
+  "devDependencies": {
+    "eslint": "^8.29.0"
+  }
+}

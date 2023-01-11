@@ -1,0 +1,15 @@
+name: "Action Change Redme"
+description: "Action para cambair el Readme dependiendo si han fallado los test"
+inputs:
+  frase_positiva:
+    description: "Mensaje o url que saldra cuando se pasen los test correctamente"
+    required: true
+  frase_negativa:
+    description: "Mensaje o url que saldra cuando falle los tests"
+    required: true
+  resultado_tests:
+    description: "Resultado de los tests"
+    required: true
+runs:
+  using: "node16"
+  main: "dist/index.js"

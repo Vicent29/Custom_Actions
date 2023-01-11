@@ -1,0 +1,20 @@
+name: modify_readme_workflow
+on:
+  push:
+    branches:
+      - "github_action_readme"
+jobs:
+  test-ejecution:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Jest test
+        id: test 
+        run: npm install jest && npm test
+        continue-on-error: true
+      - name: Send email
+        if: steps.test.outcome != 'success'
+        run: echo "Test failed by Vicent"
+        if: steps.test.outcome == 'success'
+        run: echo "ALL TEST SUCCESFULLY"
