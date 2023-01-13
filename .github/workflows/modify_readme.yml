@@ -16,5 +16,3 @@ jobs:
       - name: Send email
         if: steps.test.outcome != 'success'
         run: echo "Test failed by Vicent"
-        if: steps.test.outcome == 'success'
-        run: echo "ALL TEST SUCCESFULLY"
