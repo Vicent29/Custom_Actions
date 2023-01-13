@@ -12,7 +12,6 @@ jobs:
       - name: Jest test
         id: test 
         run: npm install jest && npm test
-        continue-on-error: true
   Change_Readme:
     runs-on: ubuntu-latest
     if: ${{ always() }}

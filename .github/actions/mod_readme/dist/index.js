@@ -2822,7 +2822,7 @@ const path = __nccwpck_require__(17);
 const fs = __nccwpck_require__(147);
 
 //Declaration of variables
-const readmePath = path.resolve('../../../README.md');
+const readmePath = path.resolve('./README.md');
 const frase_positiva = core.getInput("frase_positiva");
 const frase_negativa = core.getInput("frase_negativa");
 const resultado_tests = core.getInput("resultado_tests");
