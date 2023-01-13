@@ -24,7 +24,7 @@ jobs:
         with:
           frase_positiva: "bender/vamoss!!/salio_bien_el_test"
           frase_negativa: "cryingfloor/casi.../error_tremendo"
-          resultado_tests: ${{ needs.test-ejecution.result }}
+          resultado_tests: ${{ needs.test-execution.result }}
       - name: "Push Readme"
         uses: EndBug/add-and-commit@v9
         with:
