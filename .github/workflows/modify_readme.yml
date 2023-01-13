@@ -22,7 +22,7 @@ jobs:
         uses: actions/checkout@v2
       - name: "Action Readme"
         uses: ../actions/mod_readme
-        env:
+        with:
           frase_positiva: "bender/vamoss!!/salio_bien_el_test"
           frase_negativa: "cryingfloor/casi.../error_tremendo"
           resultado_tests: ${{ needs.test-ejecution.result }}
