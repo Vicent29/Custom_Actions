@@ -2822,7 +2822,7 @@ const path = __nccwpck_require__(17);
 const fs = __nccwpck_require__(147);
 
 //Declaration of variables
-const readmePath = path.resolve('./README.md');
+const readmePath = path.resolve('../README.md');
 const frase_positiva = core.getInput("frase_positiva");
 const frase_negativa = core.getInput("frase_negativa");
 const resultado_tests = core.getInput("resultado_tests");
@@ -2832,12 +2832,12 @@ const MemeNegativo= URL.replace("img", frase_positiva);
 const MemePositivo= URL.replace("img", frase_negativa);
 
 //Add line img meme
-var AddMeme = "![Meme Test](" + resultado_tests === "success" ? MemePositivo : MemeNegativo + ")"
+var AddMeme = resultado_tests === "success" ? MemePositivo : MemeNegativo 
 
 //Change Readme
 fs.readFile(readmePath, 'utf8', function(err, data) {
     if (err) throw err;
-    data += AddMeme;
+    data +=  "![Meme Test](" + AddMeme + ")";
     fs.writeFile(readmePath, data, function(err) {
         if (err) throw err;
         console.log("Readme Modificado correctamente");
