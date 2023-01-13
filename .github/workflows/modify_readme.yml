@@ -13,6 +13,24 @@ jobs:
         id: test 
         run: npm install jest && npm test
         continue-on-error: true
-      - name: Send email
-        if: steps.test.outcome != 'success'
-        run: echo "Test failed by Vicent"
+  Change_Readme:
+    runs-on: ubuntu-latest
+    if: ${{ always() }}
+    needs: [test-ejecution]
+    steps:
+      - name: "Checkout code"
+        uses: actions/checkout@v2
+      - name: "Action Readme"
+        uses: ../actions/mod_readme
+        with:
+          frase_negativa: "cryingfloor/casi.../error_tremendo"
+          frase_positiva: "bender/vamoss!!/salio_bien_el_test"
+          resultado_tests: ${{ needs.jest.result }}
+      - name: "Push Readme"
+        uses: EndBug/add-and-commit@v9
+        with:
+          add: "."
+          author_name: "Vicent Esteve Ferre"
+          author_email: "esteve.ferre.vicent@gmail.com"
+          message: "Readme Updated succesfully"
+          push: true
