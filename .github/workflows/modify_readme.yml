@@ -9,8 +9,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: install
-        run: npm install -D
       - name: Jest test
         id: test 
         run: npm install jest && npm test
