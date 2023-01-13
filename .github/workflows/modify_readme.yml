@@ -11,6 +11,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Jest test
         id: test 
+        workdir: ./test
         run: npm install jest && npm test
   Change_Readme:
     runs-on: ubuntu-latest
