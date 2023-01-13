@@ -2826,9 +2826,6 @@ const readmePath = path.resolve('../../../README.md');
 const frase_positiva = core.getInput("frase_positiva");
 const frase_negativa = core.getInput("frase_negativa");
 const resultado_tests = core.getInput("resultado_tests");
-// const frase_positiva = process.env.frase_positiva;
-// const frase_negativa = process.env.frase_negativa;
-// const resultado_tests = process.env.resultado_tests;
 const URL= "https://api.memegen.link/images/img.png";
 
 const MemeNegativo= URL.replace("img", frase_positiva);
