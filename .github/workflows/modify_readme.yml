@@ -22,9 +22,9 @@ jobs:
         uses: actions/checkout@v2
       - name: "Action Readme"
         uses: ../actions/mod_readme
-        with:
-          frase_negativa: "cryingfloor/casi.../error_tremendo"
+        env:
           frase_positiva: "bender/vamoss!!/salio_bien_el_test"
+          frase_negativa: "cryingfloor/casi.../error_tremendo"
           resultado_tests: ${{ needs.test-ejecution.result }}
       - name: "Push Readme"
         uses: EndBug/add-and-commit@v9
