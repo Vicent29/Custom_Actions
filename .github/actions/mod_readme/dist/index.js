@@ -2832,8 +2832,8 @@ const MemeNegativo= URL.replace("img", frase_positiva);
 const MemePositivo= URL.replace("img", frase_negativa);
 
 //Add line img meme
-var msg_output = resultado_tests === "success" ? "El README ha sido modificado correctamente con el MemePositivo" : "El README ha sido modificado correctamente con el MemePositivo";
-var AddMeme = resultado_tests === "success" ? MemePositivo : MemeNegativo;
+var msg_output = resultado_tests == "success" ? "El README ha sido modificado correctamente con el MemePositivo" : "El README ha sido modificado correctamente con el MemePositivo";
+var AddMeme = resultado_tests == "success" ? MemePositivo : MemeNegativo;
 var url_img= "![Meme Test](" + AddMeme + ")";
 
 //Change Readme
