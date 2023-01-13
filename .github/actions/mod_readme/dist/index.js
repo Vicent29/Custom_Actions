@@ -2832,7 +2832,7 @@ const MemeNegativo= URL.replace("img", frase_positiva);
 const MemePositivo= URL.replace("img", frase_negativa);
 
 //Add line img meme
-
+var msg_output = resultado_tests === "success" ? "El README ha sido modificado correctamente con el MemePositivo" : "El README ha sido modificado correctamente con el MemePositivo";
 var AddMeme = resultado_tests === "success" ? MemePositivo : MemeNegativo;
 var url_img= "![Meme Test](" + AddMeme + ")";
 
@@ -2843,7 +2843,7 @@ fs.readFile(readmePath, 'utf8', function(err, data) {
     fs.writeFile(readmePath, data, function(err) {
         if (err) throw err;
         console.log("Readme Modificado correctamente");
-        core.setOutput('msg', "Readme Modificado correctamente");
+        core.setOutput('msg', msg_output);
         process.exit(0)
     });
 });

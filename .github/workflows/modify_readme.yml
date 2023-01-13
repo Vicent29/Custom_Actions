@@ -4,18 +4,20 @@ on:
     branches:
       - "github_action_readme"
 jobs:
-  test-ejecution:
+  test-execution:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+      - name: install
+        run: npm install -D
       - name: Jest test
         id: test 
         run: npm install jest && npm test
   Change_Readme:
     runs-on: ubuntu-latest
     if: ${{ always() }}
-    needs: [test-ejecution]
+    needs: [test-execution]
     steps:
       - name: "Checkout code"
         uses: actions/checkout@v2
