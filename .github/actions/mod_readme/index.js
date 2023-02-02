@@ -9,12 +9,12 @@ const frase_negativa = core.getInput("frase_negativa");
 const resultado_tests = core.getInput("resultado_tests");
 const URL= "https://api.memegen.link/images/img.png";
 
-const MemePositivo= URL.replace("img", frase_negativa);
-const MemeNegativo= URL.replace("img", frase_positiva);
+const MemePositivo= URL.replace("img", frase_positiva);
+const MemeNegativo= URL.replace("img", frase_negativa);
 
 //Add line img meme
 var msg_output = resultado_tests == "success" ? "El README ha sido modificado correctamente con el MemePositivo" : "El README ha sido modificado correctamente con el MemePositivo";
-var AddMeme = resultado_tests != "success" ? MemePositivo : MemeNegativo;
+var AddMeme = resultado_tests == "success" ? MemePositivo : MemeNegativo;
 var url_img= "![Meme Test](" + AddMeme + ")";
 
 //Change Readme
